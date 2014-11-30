@@ -1,40 +1,67 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
+ruby '2.1.5'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# needs to be included before any other gems that use environment variables
+gem 'dotenv-rails', groups: [:development, :test]
+
 gem 'rails', '4.1.8'
-# Use postgresql as the database for Active Record
+
 gem 'pg'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
 
-# Use jquery as the JavaScript library
+gem 'active_model_serializers'
+gem 'bcrypt'
+gem 'bootstrap-sass'
+gem 'bourbon'
+gem 'coffee-rails'
+gem 'feedbag'
+gem 'feedjira'
+gem 'font-awesome-sass'
+gem 'foreigner'
+gem 'haml-rails'
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'rack-mini-profiler'
+gem 'sass-rails'
+gem 'sidekiq'
+gem 'uglifier'
+gem 'unicorn'
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+gem 'rails-assets-underscore'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+group :production do
+  gem 'rails_12factor'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
+group :development do
+  gem 'brakeman', require: false
+  gem 'spring'
+  gem 'spring-commands-rspec'
+end
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+group :development, :test do
+  gem 'bullet'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'guard'
+  gem 'guard-rubocop'
+  gem 'guard-zeus'
+  gem 'haml-lint'
+  gem 'rspec-rails'
+  gem 'rubocop', require: false
+  gem 'shoulda-matchers', require: false
+  gem 'teaspoon'
+end
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'guard-rspec'
+  gem 'launchy'
+  gem 'poltergeist'
+  gem 'rb-inotify'
+  gem 'simplecov', require: false
+  gem 'timecop'
+  gem 'vcr'
+  gem 'webmock', require: false
+end
