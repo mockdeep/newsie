@@ -45,7 +45,6 @@ group :development, :test do
   gem 'faker'
   gem 'guard'
   gem 'guard-rubocop'
-  gem 'guard-zeus'
   gem 'haml-lint'
   gem 'rspec-rails'
   gem 'rubocop', require: false
