@@ -54,12 +54,12 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'codeclimate-test-reporter', require: false
   gem 'database_cleaner'
   gem 'guard-rspec'
   gem 'launchy'
   gem 'poltergeist'
   gem 'rb-inotify'
-  gem 'simplecov', require: false
   gem 'timecop'
   gem 'vcr'
   gem 'webmock', require: false

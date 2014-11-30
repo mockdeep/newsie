@@ -1,7 +1,12 @@
 ENV['RAILS_ENV'] ||= 'test'
 
-require 'simplecov'
-SimpleCov.start 'rails'
+require 'codeclimate-test-reporter'
+SimpleCov.start 'rails' do
+  formatter SimpleCov::Formatter::MultiFormatter[
+    SimpleCov::Formatter::HTMLFormatter,
+    CodeClimate::TestReporter::Formatter
+  ]
+end
 
 require_relative 'spec_helper'
 require_relative '../../config/environment'
