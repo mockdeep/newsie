@@ -1,0 +1,14 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Include:
+    - Guardfile
+    - config.ru
+    - Rakefile
+    - !ruby/regexp /.*\.rake/
+  Exclude:
+    - db/schema.rb
+  RunRailsCops: true
+
+Style/Documentation:
+  Enabled: false
