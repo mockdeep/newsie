@@ -9,9 +9,10 @@ SimpleCov.start 'rails' do
 end
 
 require_relative 'spec_helper'
-require_relative '../../config/environment'
+require_relative '../config/environment'
 
 require 'rspec/rails'
+require 'shoulda/matchers'
 require 'capybara/rspec'
 require 'vcr'
 require 'sidekiq'
