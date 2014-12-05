@@ -173,6 +173,9 @@ GEM
     mini_portile (0.6.1)
     minitest (5.4.3)
     multi_json (1.10.1)
+    neat (1.5.1)
+      bourbon (>= 3.1)
+      sass (~> 3.2.19)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     parser (2.2.0.pre.8)
@@ -353,6 +356,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   launchy
+  neat
   pg
   poltergeist
   rack-mini-profiler
